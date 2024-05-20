@@ -273,7 +273,6 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 5,
     marginBottom: 30, // Add space between buttons
-    marginTop: 20
+    marginTop: 5
   },
-
 });

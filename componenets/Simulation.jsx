@@ -1,31 +1,42 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const Simulation = ({ onPress }) => {
+  const navigation = useNavigation();
+
   return (
-    <View style={{flex: 1, marginTop: 30}}>
-        <TouchableOpacity>
-            <Text style={styles.simulationText}>DeadLock</Text>
-        </TouchableOpacity>
+    <View style={styles.container}>
+      <TouchableOpacity style={styles.simulationCard} onPress={() => navigation.navigate('Deadlock')}>
+        <Text style={styles.simulationText}>Deadlock</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center', // Center vertically
+    alignItems: 'center', // Center horizontally
+    backgroundColor: '#f5f5f5', // Light background color
+    padding: 20,
+  },
   simulationCard: {
-    backgroundColor: '#fff', // White background
-    padding: 15,
-    borderRadius: 5,
-    elevation: 3, // Add a slight shadow for card effect
+    backgroundColor: '#4A90E2', // Attractive blue color
+    padding: 30, // Increased padding for a larger box
+    borderRadius: 10, // Rounded corners
+    elevation: 5, // More pronounced shadow
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    marginBottom: 20, // Add space between cards
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.3, // Darker shadow for more depth
+    shadowRadius: 5,
+    marginBottom: 20, // Space between cards
   },
   simulationText: {
-    fontSize: 18,
+    fontSize: 24, // Larger font size
     fontWeight: 'bold',
+    color: '#fff', // White text color
     textAlign: 'center',
   },
 });

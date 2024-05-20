@@ -6,6 +6,8 @@ import Homescreen from './screens/home/Homescreen';
 import Start from './screens/home/Start';
 import ReadChapter from './componenets/ReadChapter';
 import Simulation from './componenets/Simulation';
+import Deadlock from './screens/simulations/Deadlock';
+import DeadlockMatrix from './screens/simulations/DeadlockMatrix';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +20,9 @@ export default function App() {
         <Stack.Screen name='Start' component={Start} options={{headerShown: false}}/>
         <Stack.Screen name='Read' component={ReadChapter} options={{headerShown: false}}/>
         <Stack.Screen name='Simulation' component={Simulation} options={{headerShown: false}}/>
+        <Stack.Screen name='Deadlock' component={Deadlock} options={{headerShown: false}}/>
+        <Stack.Screen name='DeadlockMatrix' component={DeadlockMatrix} options={{headerShown: false}}/>
+
       </Stack.Navigator>
     </NavigationContainer>
   )
