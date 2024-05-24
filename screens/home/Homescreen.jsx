@@ -1,4 +1,11 @@
-import {View, Text, Button, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  Button,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import InitialLoading from '../../componenets/InitialLoading';
@@ -45,8 +52,9 @@ export default function Homescreen({route}) {
             <View style={styles.content}>
               <Header name={userName} />
               <View style={styles.pdfCard}>
-              <Text style={styles.simulationText}>PDF Contents</Text>
+                <Text style={styles.simulationText}>PDF Contents</Text>
               </View>
+              <View style={{height: '65%'}}>
               <ScrollView contentContainerStyle={styles.scrollViewContainer}>
                 <Button
                   title="Introduction"
@@ -216,11 +224,19 @@ export default function Homescreen({route}) {
                   style={styles.button}
                 />
               </ScrollView>
-              <TouchableOpacity onPress={() => navigation.navigate('Simulation')}>
-                  <View style={styles.simulationCard}>
-                    <Text style={styles.simulationText}>Simulation</Text>
-                  </View>
-                </TouchableOpacity>
+              </View>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('ReviewQuestions')}>
+                <View style={styles.simulationCard}>
+                  <Text style={styles.simulationText}>Review Questions</Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('Simulation')}>
+                <View style={styles.simulationCard}>
+                  <Text style={styles.simulationText}>Simulation</Text>
+                </View>
+              </TouchableOpacity>
             </View>
           )}
         </>
@@ -232,7 +248,7 @@ export default function Homescreen({route}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f0f0f0', // Light background
+    backgroundColor: '#3C5B6F', // Light background
   },
   content: {
     flex: 1,
@@ -242,7 +258,8 @@ const styles = StyleSheet.create({
   scrollViewContainer: {
     // alignItems: 'center', // Center buttons horizontally
     // paddingBottom: 20, // Add padding to avoid buttons sticking to bottom
-    // width: '100%'
+    width: '100%',
+    height: 'auto'
   },
   buttonContainer: {
     // No styles needed here (removed for clarity)
@@ -273,6 +290,6 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 5,
     marginBottom: 30, // Add space between buttons
-    marginTop: 5
+    marginTop: 5,
   },
 });

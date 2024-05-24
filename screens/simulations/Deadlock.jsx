@@ -69,7 +69,7 @@ export default function Deadlock() {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: '#F0F4F8',
+    backgroundColor: '#0F4C75',
     padding: 20,
     justifyContent: 'center',
   },

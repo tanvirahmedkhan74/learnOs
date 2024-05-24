@@ -173,6 +173,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-around',
     padding: 16,
+    backgroundColor: '#0F4C75'
   },
   tableContainer: {
     marginBottom: 24,

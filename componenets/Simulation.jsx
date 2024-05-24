@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center', // Center vertically
     alignItems: 'center', // Center horizontally
-    backgroundColor: '#f5f5f5', // Light background color
+    backgroundColor: '#3C5B6F', // Light background color
     padding: 20,
   },
   simulationCard: {
